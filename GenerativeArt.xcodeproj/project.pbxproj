@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		DFAC108E2AE81AD8004774A8 /* GenerativeArtApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAC108D2AE81AD8004774A8 /* GenerativeArtApp.swift */; };
-		DFAC10902AE81AD8004774A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAC108F2AE81AD8004774A8 /* ContentView.swift */; };
 		DFAC10922AE81ADB004774A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAC10912AE81ADB004774A8 /* Assets.xcassets */; };
 		DFAC10952AE81ADB004774A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAC10942AE81ADB004774A8 /* Preview Assets.xcassets */; };
+		DFAC109E2AE81D3D004774A8 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAC109D2AE81D3D004774A8 /* TileView.swift */; };
+		DFAC10A02AE81D52004774A8 /* MosaicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAC109F2AE81D52004774A8 /* MosaicView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DFAC108A2AE81AD8004774A8 /* GenerativeArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenerativeArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAC108D2AE81AD8004774A8 /* GenerativeArtApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerativeArtApp.swift; sourceTree = "<group>"; };
-		DFAC108F2AE81AD8004774A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DFAC10912AE81ADB004774A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFAC10942AE81ADB004774A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DFAC109D2AE81D3D004774A8 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		DFAC109F2AE81D52004774A8 /* MosaicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosaicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				DFAC108D2AE81AD8004774A8 /* GenerativeArtApp.swift */,
-				DFAC108F2AE81AD8004774A8 /* ContentView.swift */,
+				DFAC109B2AE81CE6004774A8 /* Views */,
 				DFAC10912AE81ADB004774A8 /* Assets.xcassets */,
 				DFAC10932AE81ADB004774A8 /* Preview Content */,
 			);
@@ -65,6 +67,15 @@
 				DFAC10942AE81ADB004774A8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DFAC109B2AE81CE6004774A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFAC109D2AE81D3D004774A8 /* TileView.swift */,
+				DFAC109F2AE81D52004774A8 /* MosaicView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFAC10902AE81AD8004774A8 /* ContentView.swift in Sources */,
+				DFAC109E2AE81D3D004774A8 /* TileView.swift in Sources */,
+				DFAC10A02AE81D52004774A8 /* MosaicView.swift in Sources */,
 				DFAC108E2AE81AD8004774A8 /* GenerativeArtApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
