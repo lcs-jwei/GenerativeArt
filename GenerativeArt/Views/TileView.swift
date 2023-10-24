@@ -26,11 +26,29 @@ struct TriangleTopRight: Shape {
     
     
 }
-
+struct TriangleBottomRight: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        
+        //define the path
+        path.move(to: CGPoint(x: rect.minX, y: rect.minY))
+        
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+        
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.minY))
+        
+        //return the path
+        return path
+    }
+    
+    
+}
 struct TileView: View {
     var body: some View {
         VStack {
-            TriangleTopRight()
+            TriangleBottomRight()
                 .aspectRatio(1.0, contentMode: .fit)
                     }
         .padding()
