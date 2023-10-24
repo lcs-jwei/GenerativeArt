@@ -8,23 +8,35 @@
 import SwiftUI
 
 
+//MARK: STORED PROPERTIES:
+let flipOne = Int.random(in:1...2)
+
+
+//MARK: COMPUTED PROPERTIES:
+
+
+
 struct TileView: View {
     var body: some View {
         VStack {
             
-            TriangleTopRight()
-                .stroke(.black)
-                .aspectRatio(1.0, contentMode: .fit)
-            TriangleBottomLeft()
-                .stroke(.black)
-                .aspectRatio(1.0, contentMode: .fit)
-            TriangleTopLeft()
-                .stroke(.black)
-                .aspectRatio(1.0, contentMode: .fit)
-            TriangleBottomRight()
-                .stroke(.black)
-                .aspectRatio(1.0, contentMode: .fit)
-                    }
+            if flipOne == 1{
+                
+                TriangleTopRight()
+                    .stroke(.black)
+                    .aspectRatio(1.0, contentMode: .fit)
+                TriangleBottomLeft()
+                    .stroke(.black)
+                    .aspectRatio(1.0, contentMode: .fit)
+            } else{
+                TriangleTopLeft()
+                    .stroke(.black)
+                    .aspectRatio(1.0, contentMode: .fit)
+                TriangleBottomRight()
+                    .stroke(.black)
+                    .aspectRatio(1.0, contentMode: .fit)
+            }
+        }
         .padding()
     }
 }
