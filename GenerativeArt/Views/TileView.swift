@@ -7,9 +7,23 @@
 
 import SwiftUI
 
+enum Coin: Int{
+    case heads = 1
+    case tails = 2
+    
+    static func flip() -> Coin{
+        let decision = Bool.random()
+        
+        if decision == true{
+            return .heads
+        }else {
+            return .tails
+        }
+    }
+}
 
 //MARK: STORED PROPERTIES:
-let flipOne = Int.random(in:1...2)
+let flipOne = Coin.flip()
 
 
 //MARK: COMPUTED PROPERTIES:
@@ -18,12 +32,13 @@ let flipOne = Int.random(in:1...2)
 
 struct TileView: View {
     var body: some View {
-        VStack {
+        ZStack {
             
-            if flipOne == 1{
+            if flipOne == .heads{
                 
                 TriangleTopRight()
                     .stroke(.black)
+                    .fill(.clear)
                     .aspectRatio(1.0, contentMode: .fit)
                 TriangleBottomLeft()
                     .stroke(.black)
