@@ -22,15 +22,33 @@ enum Coin: Int{
     }
 }
 
-//MARK: STORED PROPERTIES:
-let flipOne = Coin.flip()
-
-
-//MARK: COMPUTED PROPERTIES:
 
 
 
 struct TileView: View {
+    //MARK: STORED PROPERTIES:
+    let flipOne = Coin.flip()
+    let markerOne = Color.black
+    let markerTwo = Color.red
+    let flipForColor = Coin.flip()
+
+
+    //MARK: COMPUTED PROPERTIES:
+    
+    var colorOne: Color{
+        if flipForColor == .heads{
+            return markerOne
+        }else{
+            return markerTwo
+        }
+    }
+    var colorTwo: Color {
+        if flipForColor == .heads{
+            return markerTwo
+        }else{
+            return markerOne
+        }
+    }
     var body: some View {
         ZStack {
             
@@ -38,10 +56,11 @@ struct TileView: View {
                 
                 TriangleTopRight()
                     .stroke(.black)
-                    .fill(.clear)
+                    .fill(colorOne)
                     .aspectRatio(1.0, contentMode: .fit)
                 TriangleBottomLeft()
                     .stroke(.black)
+                    .fill(colorTwo)
                     .aspectRatio(1.0, contentMode: .fit)
             } else{
                 TriangleTopLeft()
