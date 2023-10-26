@@ -36,18 +36,11 @@ struct TileView: View {
     //MARK: COMPUTED PROPERTIES:
     
     var colorOne: Color{
-        if flipForColor == .heads{
-            return markerOne
-        }else{
-            return markerTwo
-        }
+        return flipForColor == .heads ? markerOne : markerTwo
+        
     }
     var colorTwo: Color {
-        if flipForColor == .heads{
-            return markerTwo
-        }else{
-            return markerOne
-        }
+        return flipForColor == .heads ? markerTwo : markerOne
     }
     var body: some View {
         ZStack {
@@ -65,9 +58,11 @@ struct TileView: View {
             } else{
                 TriangleTopLeft()
                     .stroke(.black)
+                    .fill(colorOne)
                     .aspectRatio(1.0, contentMode: .fit)
                 TriangleBottomRight()
                     .stroke(.black)
+                    .fill(colorTwo)
                     .aspectRatio(1.0, contentMode: .fit)
             }
         }
