@@ -28,8 +28,9 @@ enum Coin: Int{
 struct TileView: View {
     //MARK: STORED PROPERTIES:
     let flipOne = Coin.flip()
-    let markerOne = Color.black
-    let markerTwo = Color.red
+    let flipTwo = Coin.flip()
+    let markerOne = Color.red
+    let markerTwo = Color.black
     let flipForColor = Coin.flip()
 
 
@@ -49,20 +50,20 @@ struct TileView: View {
                 
                 TriangleTopRight()
                     .stroke(.black)
-                    .fill(colorOne)
+                    .fill(flipTwo == .heads ? colorOne : .clear)
                     .aspectRatio(1.0, contentMode: .fit)
                 TriangleBottomLeft()
                     .stroke(.black)
-                    .fill(colorTwo)
+                    .fill(flipTwo == .tails ? colorOne : .clear)
                     .aspectRatio(1.0, contentMode: .fit)
             } else{
                 TriangleTopLeft()
                     .stroke(.black)
-                    .fill(colorOne)
+                    .fill(flipTwo == .heads ? colorOne : .clear)
                     .aspectRatio(1.0, contentMode: .fit)
                 TriangleBottomRight()
                     .stroke(.black)
-                    .fill(colorTwo)
+                    .fill(flipTwo == .tails ? colorOne : .clear)
                     .aspectRatio(1.0, contentMode: .fit)
             }
         }
