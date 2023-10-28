@@ -10,7 +10,13 @@ import SwiftUI
 struct MosaicView: View {
     var body: some View {
         ZStack{
-            TileView()
+            Grid(horizontalSpacing: 0, verticalSpacing: 0){
+                GridRow{
+                    TileView()
+                    TileView()
+                    TileView()
+                }
+            }
         }
     }
 }

@@ -77,7 +77,7 @@ struct TileView: View {
                     .aspectRatio(1.0, contentMode: .fit)
             }
         }
-        .padding()
+        
     }
 }
 #Preview {
