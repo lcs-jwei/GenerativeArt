@@ -10,8 +10,8 @@ import SwiftUI
 struct MosaicView: View {
     
     //MARK: Stored Properties
-    let columns = 7
-    let rows = 4
+    @State var columns = 7.0
+    @State var rows = 4
     //MARK: Computed Properties
     
     var body: some View {
@@ -20,7 +20,7 @@ struct MosaicView: View {
                 
                 ForEach(0..<rows, id:\.self){ j in
                     GridRow{
-                        ForEach(0..<columns, id:\.self) { i in
+                        ForEach(0..<Int(columns), id:\.self) { i in
                             TileView()
                         }
                     }
@@ -30,6 +30,7 @@ struct MosaicView: View {
                     
                 }
             }
+            Slider(value: $columns, in:1...1000, step: 1.0)
         }
     }
 }
